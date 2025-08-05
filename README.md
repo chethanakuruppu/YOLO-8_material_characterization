@@ -1,4 +1,3 @@
-**YOLOv8- Material characterization**
 Scientific Project I - EL060A- **“Advanced Materials
 Characterization Using X-ray Imaging and YOLOv8:
 A Scientific Exploration”**
