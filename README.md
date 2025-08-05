@@ -25,3 +25,20 @@ manual analysis, and improved consistency, offering scalable solutions for resea
 control, and industrial inspection[13, 14].
 Keywords: XAS, deep learning, image classification, Material Characterization, Alloys,
 Wedge Absorption Study, AI, YOLO
+
+**Summary of “Training and Validation Loss Curves for YOLOv8n”**
+
+The model performed best when trained on the 5mm thickness dataset, achieving the highest stability and validation accuracy. Training on the 1mm dataset resulted in the poorest performance, while the 2mm dataset produced better, but still suboptimal, results.
+
+Combining datasets showed mixed outcomes. Merging the 1mm and 2mm datasets was unsatisfactory, but combining the 2mm and 5mm datasets noticeably improved performance, though it did not surpass the results from the exclusive 5mm dataset.
+
+These findings suggest that increased material thickness and larger wedge sizes are key factors for achieving more accurate and stable training results. The 5mm dataset consistently yielded the best performance metrics, including high precision, recall, and mAP, proving to be the most effective for this model.
+| Thickness (mm) | Precision (P) | Recall (R) | mAP@50 | mAP@50-95 |
+|---|---|---|---|---|
+| 1 mm | 0.675 | 0.890 | 0.884 | 0.884 |
+| 2 mm | 0.870 | 1.000 | 0.920 | 0.995 |
+| 5 mm | 1.000 | 1.000 | 1.000 | 0.996 |
+| 1 mm + 2 mm | 0.799 | 1.000 | 0.984 | 0.984 |
+| 2 mm + 5 mm | 1.000 | 1.000 | 0.995 | 0.995 |
+
+As seen in the table above, the dataset for 5mm thickness achieved the highest overall performance. Although combining data sets (e.g., 2mm + 5mm) improved generalization, the data set of only 5mm consistently produced the most stable and accurate results.
